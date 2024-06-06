@@ -26,4 +26,34 @@ const { title } = Astro.props;
   @tailwind components;
   @tailwind utilities;
   @tailwind variants;
+
+  @font-face {
+    font-family: 'Montserrat-Regular';
+    font-weight: 400;
+    src: url("/src/fonts/Montserrat-Regular.ttf") format('truetype'),
+  }
+  
+  @font-face {
+    font-family: 'Montserrat-SemiBold';
+    font-weight: 600;
+    src: url("/src/fonts/Montserrat-SemiBold.ttf") format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Montserrat-Bold';
+    font-weight: 700;
+    src: url("/src/fonts/Montserrat-Bold.ttf") format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Montserrat-ExtraBold';
+    font-weight: 800;
+    src: url("/src/fonts/Montserrat-ExtraBold.ttf") format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'SourceCodePro-Light';
+    font-weight: 600;
+    src: url("/src/fonts/SourceCodePro-Light.ttf") format('truetype'),
+  }
 </style>
