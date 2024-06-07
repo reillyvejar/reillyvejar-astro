@@ -27,33 +27,48 @@ const { title } = Astro.props;
   @tailwind utilities;
   @tailwind variants;
 
-  @font-face {
-    font-family: 'Montserrat-Regular';
-    font-weight: 400;
-    src: url("/src/fonts/Montserrat-Regular.ttf") format('truetype'),
-  }
-  
-  @font-face {
-    font-family: 'Montserrat-SemiBold';
-    font-weight: 600;
-    src: url("/src/fonts/Montserrat-SemiBold.ttf") format('truetype'),
-  }
-
-  @font-face {
-    font-family: 'Montserrat-Bold';
-    font-weight: 700;
-    src: url("/src/fonts/Montserrat-Bold.ttf") format('truetype'),
-  }
-
-  @font-face {
-    font-family: 'Montserrat-ExtraBold';
-    font-weight: 800;
-    src: url("/src/fonts/Montserrat-ExtraBold.ttf") format('truetype'),
-  }
-
-  @font-face {
-    font-family: 'SourceCodePro-Light';
-    font-weight: 600;
-    src: url("/src/fonts/SourceCodePro-Light.ttf") format('truetype'),
+  @layer base {
+    @font-face {
+      font-family: 'Montserrat-100-900';
+      src: url("/src/fonts/Montserrat-100-900.woff2") format('woff2'),
+           url("/src/fonts/Montserrat-100-900.woff") format('woff'),
+           url("/src/fonts/Montserrat-100-900.ttf") format('truetype');
+    }
+    @font-face {
+      font-family: 'Montserrat-Italic-100-900';
+      src: url("/src/fonts/Montserrat-Italic-100-900.woff2") format('woff2'),
+           url("/src/fonts/Montserrat-Italic-100-900.woff") format('woff'),
+           url("/src/fonts/Montserrat-Italic-100-900.ttf") format('truetype');
+    }
+    @font-face {
+      font-family: 'SourceCodePro-100-900';
+      src: url("/src/fonts/SourceCodePro-100-900.woff2") format('woff2'),
+           url("/src/fonts/SourceCodePro-100-900.woff") format('woff'),
+           url("/src/fonts/SourceCodePro-100-900.ttf") format('truetype');
+    }
+    @font-face {
+      font-family: 'SourceCodePro-Italic-100-900';
+      src: url("/src/fonts/SourceCodePro-Italic-100-900.woff2") format('woff2'),
+           url("/src/fonts/SourceCodePro-Italic-100-900.woff") format('woff'),
+           url("/src/fonts/SourceCodePro-Italic-100-900.ttf") format('truetype');
+    }
+    @font-face {
+      font-family: 'JosefinSans-100-700';
+      src: url("/src/fonts/JosefinSans-100-700.woff2") format('woff2'),
+           url("/src/fonts/JosefinSans-100-700.woff") format('woff'),
+           url("/src/fonts/JosefinSans-100-700.ttf") format('truetype');
+    }
+    @font-face {
+      font-family: 'JosefinSans-Italic-100-700';
+      src: url("/src/fonts/JosefinSans-Italic-100-700.woff2") format('woff2'),
+           url("/src/fonts/JosefinSans-Italic-100-700.woff") format('woff'),
+           url("/src/fonts/JosefinSans-Italic-100-700.ttf") format('truetype');
+    }
+    @font-face {
+      font-family: 'Inter-100-900';
+      src: url("/src/fonts/Inter-100-900.woff2") format('woff2'),
+           url("/src/fonts/Inter-100-900.woff") format('woff'),
+           url("/src/fonts/Inter-100-900.ttf") format('truetype');
+    }
   }
 </style>
