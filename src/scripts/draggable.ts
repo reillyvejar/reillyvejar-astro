@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
   draggable.addEventListener('mousedown', function (e: MouseEvent) {
     draggable.style.cursor = 'grabbing';
 
-    const distFromNameCornerX:number = e.clientX - draggable.offsetLeft;
-    const distFromNameCornerY:number = e.clientY - draggable.offsetTop;
+    const distFromNameCornerX:number = e.pageX - draggable.offsetLeft;
+    const distFromNameCornerY:number = e.pageY - draggable.offsetTop;
+
+    console.log(distFromNameCornerX)
+    console.log(distFromNameCornerY)
 
     function onMouseMove(event: MouseEvent) {
       let leftPos:number = event.pageX - distFromNameCornerX;
@@ -18,16 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const viewportWidth = document.documentElement.clientWidth;
       const viewportHeight = document.documentElement.clientHeight;
 
-      if (leftPos < -4) {
-        leftPos = -4;
+      if (leftPos < 0) {
+        leftPos = 0;
       }
       
-      if (topPos < -20) {
-        topPos = -20;
+      if (topPos < -16) {
+        topPos = -16;
       }
 
-      if (leftPos > viewportWidth - 765) {
-        leftPos = viewportWidth - 765;
+      if (leftPos > viewportWidth - draggable.offsetWidth) {
+        leftPos = viewportWidth - draggable.offsetWidth;
       }
 
       if (topPos > viewportHeight - draggable.offsetHeight) {
